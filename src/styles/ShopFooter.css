@@ -1,0 +1,111 @@
+.shop-footer {
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  color: #111;
+  padding: 50px 20px 10px;
+  font-family: "Poppins", sans-serif;
+  border-top: 2px solid #e5e7eb;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-section h3 {
+  color: #4f46e5;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #4f46e5;
+}
+
+/* 🧸 Brand Info */
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* 🌐 Social Links */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #4f46e5;
+  background: #e0e7ff;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #4f46e5;
+  color: white;
+}
+
+/* 🧾 Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 14px;
+  color: #666;
+}
+
+.dev-name {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .shop-footer {
+    text-align: center;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
