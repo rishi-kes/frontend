@@ -5,91 +5,28 @@
   font-weight: 400;
   color: #222;
   background-color: #ffffff;
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* 🎨 Smooth transitions */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ✅ Body reset */
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  display: block;
   background: var(--background, #ffffff);
   color: var(--foreground, #222);
 }
 
-/* ✅ Typography */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-}
-
-p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* ✅ Links */
 a {
   color: #2575fc;
-  font-weight: 500;
   text-decoration: none;
   transition: color 0.25s ease;
 }
 a:hover {
   color: #6a11cb;
-}
-
-/* ✅ Buttons */
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #2575fc;
-  color: white;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-button:hover {
-  background-color: #6a11cb;
-}
-button:focus,
-button:focus-visible {
-  outline: 3px solid #6a11cb;
-  outline-offset: 2px;
-}
-
-/* ✅ Inputs */
-input, textarea {
-  font-family: inherit;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0.5em 0.75em;
-  color: inherit;
-  background-color: inherit;
-  transition: border-color 0.25s ease, background-color 0.25s ease;
-}
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #6a11cb;
-}
-
-/* ✅ Smooth scroll */
-html {
-  scroll-behavior: smooth;
 }
 
 /* 🧩 Tailwind Core */
@@ -98,120 +35,7 @@ html {
 @tailwind utilities;
 
 /* ============================================================
-   🎨 THEME DESIGN TOKENS (Light + Dark)
-============================================================ */
-
-/* 🌞 LIGHT MODE */
-:root {
-  --button-outline: rgba(0, 0, 0, 0.10);
-  --badge-outline: rgba(0, 0, 0, 0.05);
-  --opaque-button-border-intensity: -8;
-
-  --elevate-1: rgba(0, 0, 0, 0.03);
-  --elevate-2: rgba(0, 0, 0, 0.08);
-
-  --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
-  --border: 214 32% 91%;
-
-  --card: 240 10% 98%;
-  --card-foreground: 222 47% 11%;
-  --card-border: 240 10% 93%;
-
-  --sidebar: 240 10% 96%;
-  --sidebar-foreground: 222 47% 11%;
-  --sidebar-border: 240 10% 91%;
-  --sidebar-primary: 262 83% 58%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 10% 91%;
-  --sidebar-accent-foreground: 222 47% 11%;
-  --sidebar-ring: 262 83% 58%;
-
-  --popover: 240 10% 94%;
-  --popover-foreground: 222 47% 11%;
-  --popover-border: 240 10% 89%;
-
-  --primary: 262 83% 58%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 240 10% 89%;
-  --secondary-foreground: 222 47% 11%;
-
-  --muted: 240 8% 92%;
-  --muted-foreground: 215 16% 47%;
-  --accent: 240 10% 90%;
-  --accent-foreground: 222 47% 11%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --input: 214 32% 85%;
-  --ring: 262 83% 58%;
-
-  --chart-1: 262 83% 58%;
-  --chart-2: 221 83% 53%;
-  --chart-3: 142 76% 36%;
-  --chart-4: 38 92% 50%;
-  --chart-5: 280 100% 70%;
-
-  --font-sans: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --radius: .5rem;
-}
-
-/* 🌙 DARK MODE */
-.dark {
-  --button-outline: rgba(255, 255, 255, 0.10);
-  --badge-outline: rgba(255, 255, 255, 0.05);
-  --opaque-button-border-intensity: 9;
-
-  --elevate-1: rgba(255, 255, 255, 0.04);
-  --elevate-2: rgba(255, 255, 255, 0.09);
-
-  --background: 222 47% 11%;
-  --foreground: 0 0% 98%;
-  --border: 222 47% 18%;
-
-  --card: 222 47% 13%;
-  --card-foreground: 0 0% 98%;
-  --card-border: 222 47% 16%;
-
-  --sidebar: 222 47% 15%;
-  --sidebar-foreground: 0 0% 98%;
-  --sidebar-border: 222 47% 18%;
-  --sidebar-primary: 262 83% 58%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 222 47% 18%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 262 83% 58%;
-
-  --popover: 222 47% 16%;
-  --popover-foreground: 0 0% 98%;
-  --popover-border: 222 47% 19%;
-
-  --primary: 262 83% 58%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 222 47% 19%;
-  --secondary-foreground: 0 0% 98%;
-
-  --muted: 222 47% 17%;
-  --muted-foreground: 215 16% 70%;
-  --accent: 222 47% 18%;
-  --accent-foreground: 0 0% 98%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --input: 222 47% 25%;
-  --ring: 262 83% 58%;
-
-  --chart-1: 262 83% 68%;
-  --chart-2: 221 83% 63%;
-  --chart-3: 142 76% 46%;
-  --chart-4: 38 92% 60%;
-  --chart-5: 280 100% 75%;
-}
-
-/* ============================================================
-   🧩 Tailwind Base Layer Overrides
+   🎨 Theme Tokens
 ============================================================ */
 @layer base {
   * {
@@ -223,17 +47,8 @@ html {
   }
 }
 
-/* ============================================================
-   🧰 Tailwind Utility Enhancements
-============================================================ */
 @layer utilities {
   input[type="search"]::-webkit-search-cancel-button {
     @apply hidden;
-  }
-
-  [contenteditable][data-placeholder]:empty::before {
-    content: attr(data-placeholder);
-    color: hsl(var(--muted-foreground));
-    pointer-events: none;
   }
 }
